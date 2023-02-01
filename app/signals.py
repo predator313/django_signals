@@ -23,5 +23,5 @@ def logout_successful(sender,request,user,**kwargs):
     print('logout signals')
     print('sender',sender)
     print('Request',request)
-    print('password',user.password)
+    print('password',user.password) #password is always in hashed
     print(f'kwargs:{kwargs}')
