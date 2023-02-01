@@ -25,3 +25,12 @@ def logout_successful(sender,request,user,**kwargs):
     print('Request',request)
     print('password',user.password) #password is always in hashed
     print(f'kwargs:{kwargs}')
+
+#function for the login failed
+@receiver(user_login_failed)
+def login_fail(sender,credentials,request,**kwargs):
+    print('login failed signals')
+    print('sender',sender)
+    print('Request',request)
+    print('crendential',credentials)
+    print(f'kwargs:{kwargs}')
